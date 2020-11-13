@@ -123,7 +123,7 @@ lam_a = sort([lambda a'])
 
 %% 4
 
-openfig("Disques_Gerschgorin_1.fig")
+openfig("Disques_Gerschgorin_1.fig");
 hold on
 for points = lam_a(:,1)
     plot(points, 0,"o")
