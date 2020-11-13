@@ -16,7 +16,7 @@
 %%
 clc, clear
 
-NBR_ITER_MAX = 100
+NBR_ITER_MAX = 100;
 
 %% Partie II
 
@@ -41,7 +41,7 @@ NBR_ITER_MAX = 100
 A = xlsread("Matrice_A.xlsx")
 
 % de grandeur n x n
-[n,n] = size(A);
+[n,~] = size(A);
 
 % et soit "a" les valeurs prochent des lamba qu'on cherche
 % (trouvé dans la partie I)
@@ -121,13 +121,15 @@ end
 lam_a = sort([lambda a'])
 
 
-
-
-
-
-
-
 %% 4
+
+figure(open("Disques_Gerschgorin_1.fig"))
+
+for points = lam_a(:,1)
+    plot(points, 0)
+end
+
+
 
 %% 5
 eig(A)

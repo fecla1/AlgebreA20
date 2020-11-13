@@ -123,10 +123,17 @@ lam_a = sort([lambda a'])
 
 %% 4
 
-%open("Disques_Gerschgorin_1.jpg")
+openfig("Disques_Gerschgorin_1.fig")
+hold on
+for points = lam_a(:,1)
+    plot(points, 0,"o")
+end
 
 
 
 %% 5
-eig(A)
+lam_ML = eig(A);
+disp("[ par itération | par eig(A) ]")
+Resultats = [lam_a(:,1) lam_ML];
+disp(Resultats)
 
