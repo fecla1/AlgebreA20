@@ -16,7 +16,7 @@
 %%
 clc, clear
 
-NBR_ITER_MAX = 100;
+NBR_ITER_MAX = 100
 
 %% Partie II
 
@@ -41,7 +41,7 @@ NBR_ITER_MAX = 100;
 A = xlsread("Matrice_A.xlsx")
 
 % de grandeur n x n
-[n,~] = size(A);
+[n,n] = size(A);
 
 % et soit "a" les valeurs prochent des lamba qu'on cherche
 % (trouvé dans la partie I)
@@ -121,11 +121,13 @@ end
 lam_a = sort([lambda a'])
 
 
+
+
+
+
+
+
 %% 4
-
-%open("Disques_Gerschgorin_1.jpg")
-
-
 
 %% 5
 eig(A)
